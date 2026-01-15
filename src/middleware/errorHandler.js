@@ -1,7 +1,5 @@
 // src/middleware/errorHandler.js
-// A basic error-handling middleware for Express
-
-export default function errorHandler(err, req, res, next) {
+export function errorHandler(err, req, res, next) {
   console.error('Error:', err.stack || err);
 
   res.status(err.status || 500).json({
